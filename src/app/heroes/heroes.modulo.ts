@@ -11,6 +11,7 @@ import { HeroeComponent } from './heroe/heroe.component';
         ListadoComponent
     ],
     exports: [
+        HeroeComponent,
         ListadoComponent
     ],
     imports: [
