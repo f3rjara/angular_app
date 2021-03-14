@@ -3,15 +3,14 @@
 <hr>
 <div class="row">
     <div class="col">
-        <app-personajes [personajes]="personajes"> 
-        </app-personajes>
+        <app-personajes></app-personajes>
+        <!-- lo que esta entre [] es el nombre del input que recibe el componente hijo, el = 
+        es el dato del componente padre que se quiere enviar -->
     </div>
 
     <div class="col">
-        <app-add-personajes  
-            [nuevo]="nuevo" 
-            (onNewPersonaje)="agregarNuevoPersonaje( $event )"
-        >
-        </app-add-personajes>
+        <!-- es envia el objeto nuevo con datos por defecto o lo del Form -->
+        <!-- Aqui recogemos el Output  del componente hijo "onNewPersonaje" y con recibido eejecutamos en el metodo -->
+        <app-add-personajes [inputNuevo]="nuevo"> </app-add-personajes>
     </div>
 </div>

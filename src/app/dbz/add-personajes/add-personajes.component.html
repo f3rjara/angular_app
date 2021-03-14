@@ -2,19 +2,17 @@
 <hr style="width: 90%;">
 
 <form (ngSubmit)="agregar()">
-    <input  type="text" 
-            placeholder="Nombre"
-            name="nombre"
-            [(ngModel)]="nuevo.nombre"
-    >
-
-    <input  type="number" 
-            placeholder="Poder" 
-            name="poder"
-            [(ngModel)]="nuevo.poder"
-    >
-
+    <input  type="text"  placeholder="Nombre" name="nombre"
+            [(ngModel)]="nuevo.nombre">
+    <input  type="number"  placeholder="Poder" name="poder"
+            [(ngModel)]="nuevo.poder">
     <button type="submit">
         Agregar
     </button>
 </form>
+
+<!--
+ngMNodel es muy abrewviado a y combina propiedades y eventos pero requiere name en el input
+    [value] = "nuevo.nombre"  -> esto es una propiedad
+    (input) = "cambiarnombre()"  -> es es un evento
+-->
